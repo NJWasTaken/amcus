@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
+  <meta name="Adrusht Shetty" content="https://aws-ml-adrushtshetty.herokuapp.com/">
+
+  <title>DoctorDEV: An automated check-up</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.ico" />
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="static/plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Icon Font Css -->
+  <link rel="stylesheet" href="static/plugins/icofont/icofont.min.css">
+  <!-- Slick Slider  CSS -->
+  <link rel="stylesheet" href="static/plugins/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="static/plugins/slick-carousel/slick/slick-theme.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+
+<body id="top" onload="getLocation()" style="background-color: #b8c6db;
+background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);">
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+	const lat = position.coords.latitude
+	const long = position.coords.longitude
+	const dict_values= {lat,long}
+	const s = JSON.stringify(dict_values);
+	console.log(s)
+	//window.alert(s)
+
+	const xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "store.php?lat=" + position.coords.latitude +"&long=" +  position.coords.longitude);
+	xhttp.send();
+}
+</script>
+
+
+<header>
+	<div class="header-top-bar">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<ul class="top-bar-info list-inline-item pl-0 mb-0">
+						<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>doctor.dev.ml@gmail.com</a></li>
+						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Bangalore, India </li>
+					</ul>
+				</div>
+				<div class="col-lg-6">
+					<div class="text-lg-right top-right-bar mt-2 mt-lg-0">
+						<a href="tel:+23-345-67890" >
+							<span>Call Now : </span>
+							<span class="h4">+91 987 65 43210</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg navigation" id="navbar">
+		<div class="container">
+		 	 <a class="navbar-brand" href="/">
+			  	<img src="static/images/logo.png" alt="" class="img-fluid">
+			  </a>
+
+		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="icofont-navigation-menu"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarmain">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="#">Home</a>
+			  </li>
+			   <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="/services" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services <i class="icofont-thin-down"></i></a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown03">
+						<li><a class="dropdown-item" href="/services">Services</a></li>
+						<li><a class="dropdown-item" href="/covid19">COVID-19</a></li>
+						<li><a class="dropdown-item" href="/alergy_flu_cold_covid">AFCC</a></li>
+						<li><a class="dropdown-item"  href="#">Diabetes</a></li>
+						<li><a class="dropdown-item" href="/cvd">CVD</a></li>
+						<li><a class="dropdown-item" href="/comprehensive">Comprehensive</a></li>
+					</ul>
+			  	</li>
+
+
+			</ul>
+		  </div>
+		</div>
+	</nav>
+</header>
+	
+
+
+<section class="page-title bg-1">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <span class="text-white">Diabetes mellitus</span>
+          <h1 class="text-capitalize mb-5 text-lg">Diabetes</h1>
+
+          <!-- <ul class="list-inline breadcumb-nav">
+            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+            <li class="list-inline-item"><span class="text-white">/</span></li>
+            <li class="list-inline-item"><a href="#" class="text-white-50">Book your Seat</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="appoinment section">
+  <div class="container">
+    <div class="row">
+<!--      <div class="col-lg-4">-->
+<!--          <div class="mt-3">-->
+<!--            <div class="feature-icon mb-3">-->
+<!--              <i class="icofont-support text-lg"></i>-->
+<!--            </div>-->
+<!--             <span class="h3">Call for an Emergency Service!</span>-->
+<!--              <h2 class="text-color mt-3">+84 789 1256 </h2>-->
+<!--          </div>-->
+<!--      </div>-->
+
+      <div class="col-lg-8">
+           <div class="appoinment-wrap mt-5 mt-lg-0 pl-lg-5">
+            <h2 class="mb-2 title-color">Diabetes </h2>
+            <p class="mb-4">Filling in all the fields is a must.</p>
+
+               <form action="{{ url_for('diabetes')}}" method="post" >
+
+				   								<p>
+				   									<div><h3>Do you have High Blood Pressure ?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="BP" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="BP" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+
+												<p>
+				   									<div><h3>Do you have high Cholesterol levels ?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="chol" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="chol" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Select Your BMI ?</h3>
+
+				   										<div class="slider-ui color5" style="transform: translate(+2%, -100%);margin-bottom: -4%">
+															<input type="range" min="10" max="100" step="1" name="bmi">
+															<div class="bar">
+																<span class="min"></span>
+																<span class="max"></span>
+															</div>
+															<div class="track">
+																<div class="value"></div>
+															</div>
+
+<!--					   								<div class="slider-ui color1" style="transform: translate(+2%, -100%);margin-bottom: -4%">-->
+<!--														<input type="range" min="10" max="100" step="1" name="bmi">-->
+<!--														<div class="bar">-->
+<!--															<span class="min"></span>-->
+<!--															<span class="max"></span>-->
+<!--														</div>-->
+<!--														<div class="track">-->
+<!--															<div class="value"></div>-->
+<!--														</div>-->
+<!--													</div>-->
+					   								<script>
+														const sliders = document.querySelectorAll(".slider-ui");
+														sliders.forEach(slider => {
+															let input = slider.querySelector("input[type=range]");
+															let min = input.getAttribute("min");
+															let max = input.getAttribute("max");
+															let valueElem = slider.querySelector(".value");
+															slider.querySelector(".min").innerText = min;
+															slider.querySelector(".max").innerText = max;
+															function setValueElem() {
+																valueElem.innerText = input.value;
+																let percent = (input.value - min) / (max - min) * 100;
+																valueElem.style.left = percent + "%";
+															}
+															setValueElem();
+															input.addEventListener("input", setValueElem);
+															input.addEventListener("mousedown", () => {
+																valueElem.classList.add("up");
+															});
+															input.addEventListener("mouseup", () => {
+																valueElem.classList.remove("up");
+															});
+														});
+													</script>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you smoke ?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="smoker" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="smoker" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Have you ever experienced a stroke?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="stroke" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="stroke" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you have any CVD's ?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="cvd" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="cvd" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				  								<p>
+				   									<div><h3>Do you engage in physical activity?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="act" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="act" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you consume fruits on a daily basis ?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="fruit" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="fruit" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you consume the right amount of vegetables ?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="veg" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="veg" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Are you a heavy alcoholic ?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="alc" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="alc" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								 <p>
+				   									<div><h3>Rate your general health ?</h3>
+
+					   									<div class="range-input" style="translate(+100%, -100%); margin-left;-40%;margin-top:2.5%">
+														  <input name="genHlt" type="range" min="0" max="5" value="0" step="1">
+														  <div class="value">
+															<div></div>
+														  </div>
+														</div>
+															<script>
+																let rangeInput = document.querySelector(".range-input input");
+																let rangeValue = document.querySelector(".range-input .value div");
+
+																let start = parseFloat(rangeInput.min);
+																let end = parseFloat(rangeInput.max);
+																let step = parseFloat(rangeInput.step);
+
+																for(let i=start;i<=end;i+=step){
+																  rangeValue.innerHTML += '<div>'+i+'</div>';
+																}
+
+																rangeInput.addEventListener("input",function(){
+																  let top = parseFloat(rangeInput.value)/step * -40;
+																  rangeValue.style.marginTop = top+"px";
+																});
+													</script>
+	</div>
+
+													</div>
+												</p>
+				   								<p>
+				   									<div style="margin-top:5%"><h3>Do you face difficulty in walking ?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="walk" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="walk" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div ><h3>Sex</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="sex" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Male</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="sex" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Female</div>
+													</div>
+												</p>
+												<p>
+				   									<div ><h3>Select your age category</h3>
+
+													<div class="box" style="margin-bottom:15px;margin-top:3%">
+														  <select name="age">
+															  <option selected disabled>Select Age Category</option>
+															<option value="1">Age 18 - 24</option>
+															<option value="2">Age 25 to 29</option>
+															<option value="3">Age 30 to 34</option>
+															<option value="4">Age 35 to 39</option>
+															<option value="5">Age 40 to 44</option>
+															  <option value="6">Age 45 to 49</option>
+															  <option value="7">Age 50 to 54</option>
+															  <option value="8">Age 55 to 59</option>
+															  <option value="9">Age 60 to 64</option>
+															  <option value="10">Age 65 to 69</option>
+															  <option value="11">Age 70 to 74</option>
+															  <option value="12">Age 75 to 79</option>
+															  <option value="13">Age 80 or older</option>
+														  </select>
+														</div>
+												</p>
+<!--				   <br>-->
+
+
+												<br>
+
+
+<!--												<button type="submit" class="btn boxed-btn" style=" border: none;-->
+<!--											  background-color: #4169E1	;-->
+<!--											  padding: 15px 30px;-->
+<!--											  cursor: pointer;-->
+<!--											  display: inline-block;-->
+<!--											  border-radius: 50px;-->
+<!--											  color: white;-->
+
+<!--											">Submit</button>-->
+				   <h6>If the form isn't submitting, you have probably missed to fill a required value.</h6>
+				    <br>
+
+
+				   <button type="submit" class="btn btn-main-2 btn-round-full btn-icon" >Submit</button>
+				   <input type="reset" class="btn btn-main-2 btn-round-full btn-icon"  style='margin-left:15px'>
+<!--					<input type="reset" value="Reset">-->
+			</form>
+
+<!--               <form action="{{ url_for('covid')}}" method="post">-->
+<!--                    <div class="row">-->
+<!--                         <div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Having Problem in Breathing ?-->
+<!--                                <select class="form-control" id="Breathing">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Having A Fever ?-->
+<!--                                <select class="form-control" id="Fever">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Having A Dry Cough ?-->
+<!--                                <select class="form-control" id="Dry">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Having A Sore Throat ?-->
+<!--                                <select class="form-control" id="Sore">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Having A Running Nose ?-->
+<!--                                <select class="form-control" id="Nose">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Do you have Asthma ?-->
+<!--                                <select class="form-control" id="Asthma">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Do you have any Chronic Lung Diseases ?-->
+<!--                                <select class="form-control" id="Lung">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Do you have frequent Headaches ?-->
+<!--                                <select class="form-control" id="headache">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Do you have any Heart Disease ?-->
+<!--                                <select class="form-control" id="Heart">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Do you have Diabetes ?-->
+<!--                                <select class="form-control" id="Diabetes">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Do you have Hypertension ?-->
+<!--                                <select class="form-control" id="Hypertension">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Do you have Fatigue ?-->
+<!--                                <select class="form-control" id="Fatigue">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Do you have any Gastrointestinal issues ?-->
+<!--                                <select class="form-control" id="Gastrointestinal">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Have you recently travelled abroad ?-->
+<!--                                <select class="form-control" id="travel">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Have you been in contact with a COVID patient ?-->
+<!--                                <select class="form-control" id="Gastrointestinal">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Have you attended a large gathering ?-->
+<!--                                <select class="form-control" id="gathering">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Have you been exposed to a public environment ?-->
+<!--                                <select class="form-control" id="publicEnv">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Have any of your family members been exposed to a public environment ?-->
+<!--                                <select class="form-control" id="famPublicEnv">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Have you diligently been wearing the mask ?-->
+<!--                                <select class="form-control" id="mask">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--						<div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--								Do you frequently sanitise your hands ?-->
+<!--                                <select class="form-control" id="Sanitisation">-->
+<!--                                  <option disabled selected>Yes/No</option>-->
+<!--                                  <option value=1>Yes</option>-->
+<!--                                  <option value="0">No</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div><button type="submit" class="btn boxed-btn" style=" border: none;-->
+<!--											  background-color: #F28123;-->
+<!--											  padding: 15px 30px;-->
+<!--											  cursor: pointer;-->
+<!--											  display: inline-block;-->
+<!--											  border-radius: 50px;-->
+<!--											  color: white;-->
+
+<!--											">Predict best crop for soil.</button>-->
+<!--                    <a class="btn btn-main btn-round-full" href="confirmation.html">Make Appoinment<i class="icofont-simple-right ml-2"></i></a>-->
+<!--                </form>-->
+                                                           <br>
+                   <br>
+                   <br>
+                   <br>
+
+<!--				   <h3><span class="orange-text">The Best Crop For Your Soil: </span> {{ prediction_text }}</h3>-->
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer Start -->
+<footer class="footer section gray-bg" style = "margin-top:70px">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 mr-auto col-sm-6">
+				<div class="widget mb-5 mb-lg-0">
+					<div class="logo mb-4">
+						<img src="static/images/logo.png" alt="" class="img-fluid" style= 'width="414";height="120"'>
+					</div>
+					<p>493, Chinmaya Mission Hospital Rd, near ICICI Bank ATM, Indira Nagar 1st Stage, Stage 1, Indiranagar, Bengaluru, Karnataka 560038</p>
+
+					<ul class="list-inline footer-socials mt-4">
+						<li class="list-inline-item"><a href="https://www.facebook.com/"><i class="icofont-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/NoelJWasTaken"><i class="icofont-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.pinterest.com/"><i class="icofont-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+
+			<div class="col-lg-2 col-md-6 col-sm-6">
+				<div class="widget mb-5 mb-lg-0">
+					<h4 class="text-capitalize mb-3">Pages</h4>
+					<div class="divider mb-4"></div>
+
+					<ul class="list-unstyled footer-menu lh-35">
+						<li><a href="/">Home</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/services">Services</a></li>
+						<li><a href="/covid19">COVID-19</a></li>
+						<li><a href="/alergy_flu_cold_covid">AFCC</a></li>
+						<li><a href="#">Diabetes</a></li>
+						<li><a href="/cvd">CVD</a></li>
+						<li><a href="/comprehensive">Comprehensive</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="widget widget-contact mb-5 mb-lg-0">
+					<h4 class="text-capitalize mb-3">Get in Touch</h4>
+					<div class="divider mb-4"></div>
+
+					<div class="footer-contact-block mb-4">
+						<div class="icon d-flex align-items-center">
+							<i class="icofont-email mr-3"></i>
+							<span class="h6 mb-0">Support Available for 24/7</span>
+						</div>
+						<h4 class="mt-2"><a href="mailto:support@gmail.com">doctor.dev.ml@gmail.com</a></h4>
+					</div>
+
+					<div class="footer-contact-block">
+						<div class="icon d-flex align-items-center">
+							<i class="icofont-support mr-3"></i>
+							<span class="h6 mb-0">Mon to Fri : 08:30 - 18:00</span>
+						</div>
+						<h4 class="mt-2"><a href="tel:+919880404603">+91-987-654-3210</a></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-btm py-4 mt-5">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-lg-6">
+					<div class="copyright">
+						&copy; Copyright Reserved to <span class="text-color">DoctorDEV</span> by <a href="#" target="_blank">Adrusht Shetty and Noel Jose</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4">
+					<a class="backtop js-scroll-trigger" href="#top">
+						<i class="icofont-long-arrow-up"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+   
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+    
+    <!-- Main jQuery -->
+    <script src="static/plugins/jquery/jquery.js"></script>
+    <!-- Bootstrap 4.3.2 -->
+    <script src="static/plugins/bootstrap/js/popper.js"></script>
+    <script src="static/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/plugins/counterup/jquery.easing.js"></script>
+    <!-- Slick Slider -->
+    <script src="static/plugins/slick-carousel/slick/slick.min.js"></script>
+    <!-- Counterup -->
+    <script src="static/plugins/counterup/jquery.waypoints.min.js"></script>
+    
+    <script src="static/plugins/shuffle/shuffle.min.js"></script>
+    <script src="static/plugins/counterup/jquery.counterup.min.js"></script>
+    <!-- Google Map -->
+    <script src="static/plugins/google-map/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
+    
+    <script src="static/js/script.js"></script>
+    <script src="static/js/contact.js"></script>
+
+  </body>
+  </html>
