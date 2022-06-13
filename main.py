@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify, render_template, url_for
 import pickle
 app = Flask(__name__)
 model = pickle.load(open('COVID19.pkl', 'rb'))
-model1=pickle.load(open('AlergyColdCovid.pkl','rb'))
+model1=pickle.load(open('AlergyColdCovidReduced.pkl','rb'))
 model2=pickle.load(open('DIABETES1.pkl','rb'))
 model3=pickle.load(open("CVD.pkl",'rb'))
 model4=pickle.load(open('Comprehensive.pkl','rb'))
