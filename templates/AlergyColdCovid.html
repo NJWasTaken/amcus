@@ -2,10 +2,10 @@
 <html lang="zxx">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
-  <meta name="Adrusht Shetty" content="https://aws-ml-adrushtshetty.herokuapp.com/">
+  <meta name="description" content="With the power of Machine Learning, take a short questionnaire to tell with a verified level of guarantee, your health status. Click the button below to view our services!">
 
-  <title>DoctorDEV: An automated check-up</title>
+
+  <title>DoctorDEV: AFCC</title>
 
   <!-- Favicon -->
 	  <link rel="shortcut icon" type="image/png" href="static/images/favicon.png" />
@@ -56,7 +56,7 @@ function showPosition(position) {
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<ul class="top-bar-info list-inline-item pl-0 mb-0">
-						<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>doctor.dev.ml@gmail.com</a></li>
+						<li class="list-inline-item"><a href="mailto:doctor.dev.ml@gmail.com"><i class="icofont-support-faq mr-2"></i>doctor.dev.ml@gmail.com</a></li>
 						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Bangalore, India </li>
 					</ul>
 				</div>
@@ -84,9 +84,9 @@ function showPosition(position) {
 		  <div class="collapse navbar-collapse" id="navbarmain">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
-				<a class="nav-link" href="#">Home</a>
+				<a class="nav-link" href="/">Home</a>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+			   <li class="nav-item"><a class="nav-link" href="/book">Appointment</a></li>
 
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="/services" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services <i class="icofont-thin-down"></i></a>
@@ -147,298 +147,7 @@ function showPosition(position) {
             <h2 class="mb-2 title-color">AFCC</h2>
             <p class="mb-4">Answering all the questions is mandatory.</p>
 
-               <form action="{{ url_for('afcc')}}" method="post" >
-
-				   								<p>
-				   									<div><h3>Do you have cough ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="cough" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="cough" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-
-												<p>
-				   									<div><h3>Do you experience frequent muscle aches?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="muscle" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="muscle" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-												<p>
-				   									<div><h3>Do you experience fatigue?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="tiredness" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="tiredness" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Do you have a sore throat ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="Throat" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="Throat" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Do you have runny nose ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="runnyNose" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="runnyNose" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Do you have a stuffy nose ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="stuffyNose" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="stuffyNose" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Do you have a fever ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="fever" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="fever" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Do you feel nauseous ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="nauseous" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="nauseous" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Have you thrown up recently ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="vomit" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="vomit" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Do you have Diarrhea ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="Diarrhea" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="Diarrhea" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Are you experiencing shortness in breath ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="shortBreath" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="shortBreath" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Are you experiencing difficulty in breathing ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="diffBreath" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="diffBreath" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>AHave you lost your taste ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="taste" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="taste" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Have you lost your ability to smell ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="smell" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="smell" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Do you have an itchy nose ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="itchyNose" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="itchyNose" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Do you have an itchy eye ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="itchyEye" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="itchyEye" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Do you have an itchy mouth ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="itchyMouth" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="itchyMouth" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Does your inner ear itch ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="ear" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="ear" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-				   								<p>
-				   									<div><h3>Have you been sneezing quite often ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="sneeze" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="sneeze" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-												</p>
-
-				   									<div><h3>Do you have a conjunctivitis ?</h3>
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="conjunctivitis" value=1 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">Yes</div>
-												  </label>
-
-												  <label class="rad-label">
-													<input type="radio" class="rad-input" name="conjunctivitis" value=0 required>
-													<div class="rad-design"></div>
-													<div class="rad-text">No</div>
-													</div>
-
-
-								   <h6>If the form isn't submitting, you have probably missed to fill a required value.</h6>
-				    <br>
-
-
-				   <button type="submit" class="btn btn-main-2 btn-round-full btn-icon" >Submit</button>
-				   <input type="reset" class="btn btn-main-2 btn-round-full btn-icon" style='margin-left:15px'>
-											</form>
+                                                           <br>
 
 <!--               <form action="{{ url_for('covid')}}" method="post">-->
 <!--                    <div class="row">-->
@@ -652,8 +361,300 @@ function showPosition(position) {
 <!--											">Predict best crop for soil.</button>-->
 <!--                    <a class="btn btn-main btn-round-full" href="confirmation.html">Make Appoinment<i class="icofont-simple-right ml-2"></i></a>-->
 <!--                </form>-->
-                                                           <br>
-                   <br>
+			   <form action="{{ url_for('afcc')}}" method="post" >
+
+				   								<p>
+				   									<div><h3>Do you have cough?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="cough" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="cough" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+
+												<p>
+				   									<div><h3>Do you experience frequent muscle aches?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="muscle" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="muscle" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+												<p>
+				   									<div><h3>Do you experience fatigue?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="tiredness" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="tiredness" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you have a sore throat?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="Throat" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="Throat" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you have runny nose?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="runnyNose" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="runnyNose" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you have a stuffy nose?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="stuffyNose" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="stuffyNose" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you have a fever?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="fever" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="fever" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you feel nauseous?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="nauseous" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="nauseous" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Have you thrown up recently?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="vomit" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="vomit" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you have diarrhea?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="Diarrhea" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="Diarrhea" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Are you experiencing shortness in breath?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="shortBreath" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="shortBreath" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Are you experiencing difficulty in breathing?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="diffBreath" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="diffBreath" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Have you lost your taste?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="taste" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="taste" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Have you lost your ability to smell?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="smell" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="smell" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you have an itchy nose?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="itchyNose" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="itchyNose" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you have an itchy eye?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="itchyEye" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="itchyEye" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Do you have an itchy mouth?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="itchyMouth" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="itchyMouth" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Does your inner ear itch?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="ear" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="ear" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+				   								<p>
+				   									<div><h3>Have you been sneezing quite often?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="sneeze" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="sneeze" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+												</p>
+
+				   									<div><h3>Do you have conjunctivitis?</h3>
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="conjunctivitis" value=1 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">Yes</div>
+												  </label>
+
+												  <label class="rad-label">
+													<input type="radio" class="rad-input" name="conjunctivitis" value=0 required>
+													<div class="rad-design"></div>
+													<div class="rad-text">No</div>
+													</div>
+
+
+								   <h6>If the form isn't submitting, you have probably missed to fill a required value.</h6>
+				    <br>
+
+
+				   <button type="submit" class="btn btn-main-2 btn-round-full btn-icon" >Submit</button>
+				   <input type="reset" class="btn btn-main-2 btn-round-full btn-icon" style='margin-left:15px'>
+											</form>
+
+			   <br>
                    <br>
                    <br>
 
@@ -693,6 +694,8 @@ function showPosition(position) {
 					<div class="divider mb-4"></div>
 
 					<ul class="list-unstyled footer-menu lh-35">
+						<li><a href="/">Home</a></li>
+						<li><a href="/book">Appointment</a></li>
 						<li><a href="/services">Services</a></li>
 						<li><a href="/covid19">COVID-19</a></li>
 						<li><a href="#">AFCC</a></li>
@@ -713,7 +716,7 @@ function showPosition(position) {
 							<i class="icofont-email mr-3"></i>
 							<span class="h6 mb-0">Support Available for 24/7</span>
 						</div>
-						<h4 class="mt-2"><a href="mailto:support@gmail.com">doctor.dev.ml@gmail.com</a></h4>
+						<h4 class="mt-2"><a href="mailto:doctor.dev.ml@gmail.com">doctor.dev.ml@gmail.com</a></h4>
 					</div>
 
 					<div class="footer-contact-block">

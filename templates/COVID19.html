@@ -3,9 +3,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="description" content="With the power of Machine Learning, take a short questionnaire to tell with a verified level of guarantee, your health status. Click the button below to view our services!">
-  <meta name="Adrusht Shetty" content="https://aws-ml-adrushtshetty.herokuapp.com/">
 
-  <title>DoctorDEV: An automated check-up</title>
+
+  <title>DoctorDEV: COVID-19</title>
 
 	  <link rel="shortcut icon" type="image/png" href="static/images/favicon.png" />
 
@@ -57,7 +57,7 @@ function showPosition(position) {
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<ul class="top-bar-info list-inline-item pl-0 mb-0">
-						<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>doctor.dev.ml@gmail.com</a></li>
+						<li class="list-inline-item"><a href="mailto:doctor.dev.ml@gmail.com"><i class="icofont-support-faq mr-2"></i>doctor.dev.ml@gmail.com</a></li>
 						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Bangalore, India </li>
 					</ul>
 				</div>
@@ -85,9 +85,9 @@ function showPosition(position) {
 		  <div class="collapse navbar-collapse" id="navbarmain">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
-				<a class="nav-link" href="#">Home</a>
+				<a class="nav-link" href="/">Home</a>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+			   <li class="nav-item"><a class="nav-link" href="/book">Appointment</a></li>
 
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="/services" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services <i class="icofont-thin-down"></i></a>
@@ -151,7 +151,7 @@ function showPosition(position) {
                <form action="{{ url_for('covid')}}" method="post" >
 
 				   								<p>
-				   									<div><h3>Having Problem in Breathing ?</h3>
+				   									<div><h3>Having breathing problems?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Breathing" value=1 required>
 													<div class="rad-design"></div>
@@ -167,7 +167,7 @@ function showPosition(position) {
 												</p>
 
 												<p>
-				   									<div><h3>Having A Fever ?</h3>
+				   									<div><h3>Do you have a fever?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Fever" value=1 required>
 													<div class="rad-design"></div>
@@ -181,7 +181,7 @@ function showPosition(position) {
 													</div>
 												</p>
 												<p>
-				   									<div><h3>Having A Dry Cough ?</h3>
+				   									<div><h3>Do you have dry coughs?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Cough" value=1 required>
 													<div class="rad-design"></div>
@@ -195,7 +195,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Having A Sore Throat ?</h3>
+				   									<div><h3>Do you have a sore throat?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Throat" value=1 required>
 													<div class="rad-design"></div>
@@ -209,7 +209,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Having A Running Nose ?</h3>
+				   									<div><h3>Do you have a runny nose?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Nose" value=1 required>
 													<div class="rad-design"></div>
@@ -223,7 +223,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you have Asthma ?</h3>
+				   									<div><h3>Do you have asthma?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Asthma" value=1 required>
 													<div class="rad-design"></div>
@@ -237,7 +237,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you have any Chronic Lung Diseases ?</h3>
+				   									<div><h3>Do you have any Chronic Lung Diseases?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Lung" value=1 required>
 													<div class="rad-design"></div>
@@ -251,7 +251,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you have frequent Headaches ?</h3>
+				   									<div><h3>Do you have frequent headaches?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Headache" value=1 required>
 													<div class="rad-design"></div>
@@ -265,7 +265,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you have any Heart Disease ?</h3>
+				   									<div><h3>Do you have any heart diseases?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Heart" value=1 required>
 													<div class="rad-design"></div>
@@ -279,7 +279,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Are you a Diabetic ?</h3>
+				   									<div><h3>Are you a diabetic?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Diabetic" value=1 required>
 													<div class="rad-design"></div>
@@ -293,7 +293,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you have Hypertension ?</h3>
+				   									<div><h3>Do you have hypertension?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Hypertension" value=1 required>
 													<div class="rad-design"></div>
@@ -307,7 +307,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you have Fatigue ?</h3>
+				   									<div><h3>Do you have fatigue?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Fatigue" value=1 required>
 													<div class="rad-design"></div>
@@ -321,7 +321,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you have any Gastrointestinal issues ?</h3>
+				   									<div><h3>Do you have any gastrointestinal issues?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Gastrointestinal" value=1 required>
 													<div class="rad-design"></div>
@@ -335,7 +335,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Have you recently travelled abroad ?</h3>
+				   									<div><h3>Have you recently travelled abroad?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Travel" value=1 required>
 													<div class="rad-design"></div>
@@ -349,7 +349,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Have you been in contact with a COVID patient ?</h3>
+				   									<div><h3>Have you been in contact with a COVID patient?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="Contact" value=1 required>
 													<div class="rad-design"></div>
@@ -363,7 +363,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Have you attended a large gathering in last 10 days?</h3>
+				   									<div><h3>Have you attended a large gathering in the last 10 days?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="gathering" value=1 required>
 													<div class="rad-design"></div>
@@ -377,7 +377,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Have you been exposed to a public environment ?</h3>
+				   									<div><h3>Have you been exposed to a public environment?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="pubEnv" value=1 required>
 													<div class="rad-design"></div>
@@ -391,7 +391,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Have any of your family members been exposed to a public environment ?</h3>
+				   									<div><h3>Have any of your family members been exposed to a public environment?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="famPubEnv" value=1 required>
 													<div class="rad-design"></div>
@@ -405,7 +405,7 @@ function showPosition(position) {
 													</div>
 												</p>
 
-				   									<div><h3>Have you diligently been wearing the mask ?</h3>
+				   									<div><h3>Have you diligently been wearing a mask?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="mask" value=1 required>
 													<div class="rad-design"></div>
@@ -419,7 +419,7 @@ function showPosition(position) {
 													</div>
 
 				   								<p>
-				   									<div><h3>Do you frequently sanitise your hands ?</h3>
+				   									<div><h3>Do you frequently sanitise your hands?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="sanitise" value=1 required>
 													<div class="rad-design"></div>
@@ -707,7 +707,7 @@ function showPosition(position) {
 
 					<ul class="list-unstyled footer-menu lh-35">
 						<li><a href="/">Home</a></li>
-						<li><a href="/about">About</a></li>
+						<li><a href="/book">Appointment</a></li>
 						<li><a href="/services">Services</a></li>
 						<li><a href="#">COVID-19</a></li>
 						<li><a href="/alergy_flu_cold_covid">AFCC</a></li>
@@ -728,7 +728,7 @@ function showPosition(position) {
 							<i class="icofont-email mr-3"></i>
 							<span class="h6 mb-0">Support Available for 24/7</span>
 						</div>
-						<h4 class="mt-2"><a href="mailto:support@gmail.com">doctor.dev.ml@gmail.com</a></h4>
+						<h4 class="mt-2"><a href="mailto:doctor.dev.ml@gmail.com">doctor.dev.ml@gmail.com</a></h4>
 					</div>
 
 					<div class="footer-contact-block">
