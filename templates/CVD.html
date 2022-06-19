@@ -3,9 +3,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="description" content="With the power of Machine Learning, take a short questionnaire to tell with a verified level of guarantee, your health status. Click the button below to view our services!">
-  <meta name="Adrusht Shetty" content="https://aws-ml-adrushtshetty.herokuapp.com/">
 
-  <title>DoctorDEV: An automated check-up</title>
+
+  <title>DoctorDEV: CVD</title>
 
   <!-- Favicon -->
 	  <link rel="shortcut icon" type="image/png" href="static/images/favicon.png" />
@@ -86,9 +86,9 @@ function showPosition(position) {
 		  <div class="collapse navbar-collapse" id="navbarmain">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
-				<a class="nav-link" href="#">Home</a>
+				<a class="nav-link" href="/">Home</a>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+			   <li class="nav-item"><a class="nav-link" href="/book">Appointment</a></li>
 
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="/services" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services <i class="icofont-thin-down"></i></a>
@@ -181,7 +181,7 @@ function showPosition(position) {
 <!--													</div>-->
 <!--												</p>-->
 		  										<p>
-				   									<div><h3>Select your age ?</h3>
+				   									<div><h3>Select your age</h3>
 
 				   										<div class="slider-ui color10" style="transform: translate(+2%, -100%);margin-bottom: -4%">
 															<input type="range" min="1" max="100" step="1" name="age">
@@ -230,7 +230,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Gender ?</h3>
+				   									<div><h3>What is your gender?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="gender" value=1 required>
 													<div class="rad-design"></div>
@@ -260,7 +260,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>No. of cigarettes per day ?</h3>
+				   									<div><h3>Number of cigarettes per day</h3>
 
 				   										<div class="slider-ui color8" style="transform: translate(+2%, -100%);margin-bottom: -4%">
 															<input type="range" min="0" max="100" step="5" name="cigar">
@@ -302,7 +302,7 @@ function showPosition(position) {
 												</p>
 
 												<p>
-				   									<div><h3>Do you take medication for BP control ?</h3>
+				   									<div><h3>Do you take medication for BP control?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="medsBP" value=1 required>
 													<div class="rad-design"></div>
@@ -332,7 +332,7 @@ function showPosition(position) {
 													</div>
 												</p>
 					   							<p>
-				   									<div><h3>Do you suffer from hypertension or used to ?</h3>
+				   									<div><h3>Do you suffer from hypertension or ever used to?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="bp" value=1 required>
 													<div class="rad-design"></div>
@@ -346,7 +346,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Are you diabetic ?</h3>
+				   									<div><h3>Are you diabetic?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="diab" value=1 required>
 													<div class="rad-design"></div>
@@ -360,7 +360,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Select your total cholestrol levels ?</h3>
+				   									<div><h3>Select your total cholesterol levels</h3>
 
 				   										<div class="slider-ui color6" style="transform: translate(+2%, -100%);margin-bottom: -4%">
 															<input type="range" min="100" max="800" step="1" name="totChol">
@@ -374,7 +374,7 @@ function showPosition(position) {
 													</div>
 												</p>
 												<p>
-				   									<div><h3>Select your systolic BP levels ?</h3>
+				   									<div><h3>Select your systolic BP levels</h3>
 
 				   										<div class="slider-ui color4" style="transform: translate(+2%, -100%);margin-bottom: -4%">
 															<input type="range" min="50" max="250" step=".5" name="sysBP">
@@ -388,7 +388,7 @@ function showPosition(position) {
 													</div>
 												</p>
 					   							<p>
-				   									<div><h3>Select your disystolic BP levels ?</h3>
+				   									<div><h3>Select your diastolic BP levels</h3>
 
 				   										<div class="slider-ui color5" style="transform: translate(+2%, -100%);margin-bottom: -4%">
 															<input type="range" min="40" max="200" step=".5" name="diaBP">
@@ -402,7 +402,7 @@ function showPosition(position) {
 													</div>
 												</p>
 						   						<p>
-				   									<div><h3>Select Your BMI ?</h3>
+				   									<div><h3>Select Your BMI</h3>
 					   								<div class="slider-ui color7" style="transform: translate(+2%, -100%);margin-bottom: -4%">
 														<input type="range" min="10" max="100" step=".01" name="bmi">
 														<div class="bar">
@@ -416,7 +416,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				  								<p>
-				   									<div><h3>Select your general heart rate ?</h3>
+				   									<div><h3>Select your general heart rate</h3>
 
 				   										<div class="slider-ui color4" style="transform: translate(+2%, -100%);margin-bottom: -4%">
 															<input type="range" min="30" max="200" step=".5" name="hrtRate">
@@ -430,7 +430,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Select your glucose levels ?</h3>
+				   									<div><h3>Select your glucose levels</h3>
 
 
 				   										<div class="slider-ui color8" style="transform: translate(+2%, -100%);margin-bottom: -4%">
@@ -766,7 +766,7 @@ function showPosition(position) {
 
 					<ul class="list-unstyled footer-menu lh-35">
 						<li><a href="/">Home</a></li>
-						<li><a href="/about">About</a></li>
+						<li><a href="/book">Appointment</a></li>
 						<li><a href="/services">Services</a></li>
 						<li><a href="/covid19">COVID-19</a></li>
 						<li><a href="/alergy_flu_cold_covid">AFCC</a></li>
@@ -787,7 +787,7 @@ function showPosition(position) {
 							<i class="icofont-email mr-3"></i>
 							<span class="h6 mb-0">Support Available for 24/7</span>
 						</div>
-						<h4 class="mt-2"><a href="mailto:support@gmail.com">doctor.dev.ml@gmail.com</a></h4>
+						<h4 class="mt-2"><a href="mailto:doctor.dev.ml@gmail.com">doctor.dev.ml@gmail.com</a></h4>
 					</div>
 
 					<div class="footer-contact-block">

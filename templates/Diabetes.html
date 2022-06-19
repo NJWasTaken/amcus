@@ -5,7 +5,7 @@
 <meta name="description" content="With the power of Machine Learning, take a short questionnaire to tell with a verified level of guarantee, your health status. Click the button below to view our services!">
   <meta name="Adrusht Shetty" content="https://aws-ml-adrushtshetty.herokuapp.com/">
 
-  <title>DoctorDEV: An automated check-up</title>
+  <title>DoctorDEV: Diabetes</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.ico" />
@@ -58,7 +58,7 @@ function showPosition(position) {
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<ul class="top-bar-info list-inline-item pl-0 mb-0">
-						<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>doctor.dev.ml@gmail.com</a></li>
+						<li class="list-inline-item"><a href="mailto:doctor.dev.ml@gmail.com"><i class="icofont-support-faq mr-2"></i>doctor.dev.ml@gmail.com</a></li>
 						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Bangalore, India </li>
 					</ul>
 				</div>
@@ -86,7 +86,7 @@ function showPosition(position) {
 		  <div class="collapse navbar-collapse" id="navbarmain">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
-				<a class="nav-link" href="#">Home</a>
+				<a class="nav-link" href="/">Home</a>
 			  </li>
 			   <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
 
@@ -152,7 +152,7 @@ function showPosition(position) {
                <form action="{{ url_for('diabetes')}}" method="post" >
 
 				   								<p>
-				   									<div><h3>Do you have High Blood Pressure ?</h3>
+				   									<div><h3>Do you have high Blood Pressure?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="BP" value=1 required>
 													<div class="rad-design"></div>
@@ -168,7 +168,7 @@ function showPosition(position) {
 												</p>
 
 												<p>
-				   									<div><h3>Do you have high Cholesterol levels ?</h3>
+				   									<div><h3>Do you have high Cholesterol levels?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="chol" value=1 required>
 													<div class="rad-design"></div>
@@ -182,7 +182,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Select Your BMI ?</h3>
+				   									<div><h3>Select Your BMI</h3>
 
 				   										<div class="slider-ui color5" style="transform: translate(+2%, -100%);margin-bottom: -4%">
 															<input type="range" min="10" max="100" step="1" name="bmi">
@@ -231,7 +231,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you smoke ?</h3>
+				   									<div><h3>Do you smoke?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="smoker" value=1 required>
 													<div class="rad-design"></div>
@@ -259,7 +259,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you have any CVD's ?</h3>
+				   									<div><h3>Do you have any Cardiovascular Diseases?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="cvd" value=1 required>
 													<div class="rad-design"></div>
@@ -287,7 +287,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you consume fruits on a daily basis ?</h3>
+				   									<div><h3>Do you consume fruits on a daily basis?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="fruit" value=1 required>
 													<div class="rad-design"></div>
@@ -301,7 +301,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Do you consume the right amount of vegetables ?</h3>
+				   									<div><h3>Do you consume the right amount of vegetables?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="veg" value=1 required>
 													<div class="rad-design"></div>
@@ -315,7 +315,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div><h3>Are you a heavy alcoholic ?</h3>
+				   									<div><h3>Are you a heavy alcoholic?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="alc" value=1 required>
 													<div class="rad-design"></div>
@@ -329,7 +329,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								 <p>
-				   									<div><h3>Rate your general health ?</h3>
+				   									<div><h3>Rate your general health</h3>
 
 					   									<div class="range-input" style="translate(+100%, -100%); margin-left;-40%;margin-top:2.5%">
 														  <input name="genHlt" type="range" min="0" max="5" value="0" step="1">
@@ -359,7 +359,7 @@ function showPosition(position) {
 													</div>
 												</p>
 				   								<p>
-				   									<div style="margin-top:5%"><h3>Do you face difficulty in walking ?</h3>
+				   									<div style="margin-top:5%"><h3>Do you face difficulty in walking?</h3>
 												  <label class="rad-label">
 													<input type="radio" class="rad-input" name="walk" value=1 required>
 													<div class="rad-design"></div>
@@ -707,7 +707,7 @@ function showPosition(position) {
 							<i class="icofont-email mr-3"></i>
 							<span class="h6 mb-0">Support Available for 24/7</span>
 						</div>
-						<h4 class="mt-2"><a href="mailto:support@gmail.com">doctor.dev.ml@gmail.com</a></h4>
+						<h4 class="mt-2"><a href="mailto:doctor.dev.ml@gmail.com">doctor.dev.ml@gmail.com</a></h4>
 					</div>
 
 					<div class="footer-contact-block">
