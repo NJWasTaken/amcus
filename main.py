@@ -318,7 +318,7 @@ def afcc():
     elif prediction[0]==3:
         output="Flu"
         msg="Its the flu go to your nearest doctor and get your self a prescription"
-    return render_template("afcc_Confirm.html", prediction_text='{}'.format(output), msg_text='{}'.format(msg))
+    return render_template("AFCC_Confirm.html", prediction_text='{}'.format(output), msg_text='{}'.format(msg))
 
 @app.route('/diabetes',methods=['POST'])
 def diabetes():
