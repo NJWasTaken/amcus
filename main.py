@@ -192,57 +192,57 @@ def bookAppointment():
     msge = "Dept: ", Dept,"Name: ", Name, "Phone: ", Phone, "Date: ", Date, "Slot: ", Slot, "Message: ", Message
     msge = str(msge)
 
-    # fromMy = 'doctor.dev@yahoo.com'  # fun-fact: "from" is a keyword in python, you can't use it as variable.. did anyone check if this code even works?
-    # to = 'noelgjose05@gmail.com'
-    # subj = 'Appointment'
-    # date = str(date)
-    # message_text = msge
-    #
-    # msg = "From: %s\nTo: %s\nSubject: %s\nDate: %s\n\n%s" % (fromMy, to, subj, date, message_text)
-    #
-    # username = str('doctor.dev@yahoo.com')
-    # password = str('DoctorDave2022')
-    #
-    # server = smtplib.SMTP("smtp.mail.yahoo.com", 465)
-    # server.login(username, password)
-    # server.sendmail(fromMy, to, msg)
-    # server.quit()
-    # print('ok the email has sent ')
+    fromMy = 'doctor.dev.ml@gmail.com'
+    to = 'doctor.dev.ml@gmail.com'
+    subj = 'Appointment'
+    date = str(date)
+    message_text = msge
+
+    msg = "From: %s\nTo: %s\nSubject: %s\nDate: %s\n\n%s" % (fromMy, to, subj, date, message_text)
+
+    username = str('doctor.dev.ml@gmail.com')
+    password = str('DoctorDave2022')
+
+    server = smtplib.SMTP("smtp.mail.yahoo.com", 465)
+    server.login(username, password)
+    server.sendmail(fromMy, to, msg)
+    server.quit()
+    print('ok the email has sent ')
 
 
-    # import smtplib, ssl
-    # dept = request.form['Department']
-    # date = request.form['date']
-    # slot = request.form['slot']
-    # name = request.form['name']
-    # phone = request.form['phone']
-    # message = request.form['message']
-    #
-    # Dept = dept
-    # Name= name
-    # Phone = phone
-    # Date = str(date)
-    # Slot = slot
-    # Message = message
-    # msge = "Dept: ", Dept,"Name: ", Name, "Phone: ", Phone, "Date: ", Date, "Slot: ", Slot, "Message: ", Message
-    # msge = str(msge)
-    # port = 587  # For starttls
-    # smtp_server = "smtp.gmail.com"
-    # sender_email = "doctor.dev@yahoo.com"
-    # receiver_email = "noelgjose05@gmail.com"
-    # password = "DoctorDave2022"
-    # message = """\
-    # Subject: Hi there
-    #
-    # This message is sent from Python."""
-    #
-    # context = ssl.create_default_context()
-    # with smtplib.SMTP(smtp_server, port) as server:
-    #     server.ehlo()  # Can be omitted
-    #     server.starttls(context=context)
-    #     server.ehlo()  # Can be omitted
-    #     server.login(sender_email, password)
-    #     server.sendmail(sender_email, receiver_email, message)
+    import smtplib, ssl
+    dept = request.form['Department']
+    date = request.form['date']
+    slot = request.form['slot']
+    name = request.form['name']
+    phone = request.form['phone']
+    message = request.form['message']
+
+    Dept = dept
+    Name= name
+    Phone = phone
+    Date = str(date)
+    Slot = slot
+    Message = message
+    msge = "Dept: ", Dept,"Name: ", Name, "Phone: ", Phone, "Date: ", Date, "Slot: ", Slot, "Message: ", Message
+    msge = str(msge)
+    port = 587  # For starttls
+    smtp_server = "smtp.gmail.com"
+    sender_email = "doctor.dev.ml@gmail.com"
+    receiver_email = "noelgjose05@gmail.com"
+    password = "DoctorDave2022"
+    message = """\
+    Subject: Hi there
+    
+    This message is sent from Python."""
+
+    context = ssl.create_default_context()
+    with smtplib.SMTP(smtp_server, port) as server:
+        server.ehlo()  # Can be omitted
+        server.starttls(context=context)
+        server.ehlo()  # Can be omitted
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver_email, message)
 
 
 
@@ -295,10 +295,10 @@ def covid():
     prediction = model.predict(final_features)
     if prediction[0]==1:
         output="INFECTED"
-        msg="Please take care."
+        msg="Contact us or schedule an appointment with us at the earliest."
     else:
         output="Not Infected"
-        msg="Lessgo...!"
+        msg="Looks like this isn't COVID."
     return render_template("COVID_Confirm.html", prediction_text='{}'.format(output),msg_text='{}'.format(msg))
 
 @app.route("/alergy_flu_cold_covid",methods=['POST'])
@@ -308,16 +308,16 @@ def afcc():
     prediction = model1.predict(final_features)
     if prediction[0] == 0:
         output = "Allergy"
-        msg = "Its an allergy why don't you get an allergy routine done."
+        msg = "It's an allergy. Why don't you get an allergy routine done?"
     elif prediction[0]==1:
         output = "Cold"
-        msg = "Lessgo...! at least itsn't one from the rest !"
+        msg = "It's a case of common cold. Some rest and medicine should sort it out."
     elif prediction[0]==2:
         output="COVID"
-        msg="Please take care."
+        msg="You may have COVID-19. Contact us if you feel it getting worse."
     elif prediction[0]==3:
         output="Flu"
-        msg="Its the flu go to your nearest doctor and get your self a prescription"
+        msg="Looks like it's the flu, ask your doctor for a orescription."
     return render_template("AFCC_Confirm.html", prediction_text='{}'.format(output), msg_text='{}'.format(msg))
 
 @app.route('/diabetes',methods=['POST'])
@@ -327,7 +327,7 @@ def diabetes():
     prediction = model2.predict(final_features)
     if prediction[0]==0:
         output="Not Diabetic"
-        msg="lessgo..."
+        msg="Phew!"
     elif prediction[0]==1:
         output="Pre Diabetic"
         msg="Take care."
@@ -346,7 +346,7 @@ def cvd():
         msg="For the next ten years, you are unlikely to have any cardiovascular disease."
     elif prediction[0]==1:
         output="CVD"
-        msg="Within the next ten years, you will almost certainly get a CVD. Please exercise cautious and contact your cardiologist right away."
+        msg="Within the next ten years, you will almost certainly get a CVD. Please exercise caution and contact your cardiologist right away."
     return render_template("CVD_Confirm.html", prediction_text='{}'.format(output),msg_text='{}'.format(msg))
 
 @app.route('/comprehensive',methods=['POST'])
