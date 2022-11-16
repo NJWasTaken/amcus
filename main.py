@@ -349,136 +349,136 @@ def cvd():
         msg="Within the next ten years, you will almost certainly get a CVD. Please exercise caution and contact your cardiologist right away."
     return render_template("CVD_Confirm.html", prediction_text='{}'.format(output),msg_text='{}'.format(msg))
 
-@app.route('/comprehensive',methods=['POST'])
+
+@app.route('/comprehensive', methods=['POST'])
 def comp():
     float_features = [float(x) for x in request.form.values()]
     final_features = [np.array(float_features)]
     prediction = model4.predict(final_features)
-    if prediction[0]==15:
-        output="Fungal Infection"
-        msg="You have a fungal infection."
-    elif prediction[0]==4:
-        output="Allergy"
-        msg="You have an allergy."
+    if prediction[0] == 15:
+        output = "Fungal Infection"
+        msg = "You have a fungal infection."
+    elif prediction[0] == 4:
+        output = "Allergy"
+        msg = "You have an allergy."
     elif prediction[0] == 16:
         output = "GERD"
-        msg = "You have a Gastroesophageal reflux disease."
-    elif prediction[0]==9:
-        output="Chronic cholestasis"
-        msg="You have a chronic cholestatic disease."
-    elif prediction[0]==33:
-        output="Peptic Ulcer Disease"
-        msg="You have a peptic ulcer disease."
-    elif prediction[0]==14:
-        output="Drug Reaction"
-        msg="You have a nonallergic hypersensitivity reaction or pseudoallergic drug reaction."
-    elif prediction[0]==1:
-        output="AIDS"
-        msg="You have AIDS."
-    elif prediction[0]==12:
-        output="Diabetes"
-        msg="You have diabetes."
-    elif prediction[0]==17:
-        output="Gastroenteritis"
-        msg="You have a stomach flu/gastroenteritis."
-    elif prediction[0]==6:
-        output="Bronchial Asthma"
-        msg="You have bronchial asthma."
-    elif prediction[0]==23:
-        output="Hypertension"
-        msg="You have hypertension."
-    elif prediction[0]==30:
-        output="Migrane"
-        msg="You have a migrane."
-    elif prediction[0]==7:
-        output="Cervical Spondylosis"
-        msg="You have cervical spondylosis."
-    elif prediction[0]==32:
-        output="Paralysis/Brain Hemorrhage"
-        msg="You have brain hemorrhage."
-    elif prediction[0]==28:
-        output="Jaundice"
-        msg="You have jaundice."
-    elif prediction[0]==29:
-        output="Malaria"
-        msg="You have malaria."
-    elif prediction[0]==8:
-        output="Chicken Pox"
-        msg="You have chicken pox."
-    elif prediction[0]==11:
-        output="Dengue"
-        msg="You have dengue."
-    elif prediction[0]==37:
-        output="Typhoid"
-        msg="You have typhoid."
-    elif prediction[0]==40:
-        output="Hepatitis A"
-        msg="You have Hepatitis A."
-    elif prediction[0]==19:
-        output="Hepatitis B"
-        msg="You have Hepatitis B."
-    elif prediction[0]==20:
-        output="Hepatitis C"
-        msg="You have Hepatitis C."
-    elif prediction[0]==21:
-        output="Hepatitis D"
-        msg="You have Hepatitis D."
-    elif prediction[0]==22:
-        output="Hepatitis E"
-        msg="You have Hepatitis E."
-    elif prediction[0]==3:
-        output="Alcoholic Hepatitis"
-        msg="You have alcoholic Hepatitis."
-    elif prediction[0]==36:
-        output="Tuberculosis"
-        msg="You have tuberculosis."
-    elif prediction[0]==10:
-        output="Common cold"
-        msg="You have common cold."
-    elif prediction[0]==34:
-        output="Pneumonia"
-        msg="You have pneumonia."
-    elif prediction[0]==13:
-        output="Piles"
-        msg="You have piles."
-    elif prediction[0]==18:
-        output="Heart Attack"
-        msg="You are prone to a heart attack."
-    elif prediction[0]==39:
-        output="Varicose veins"
-        msg="You have varicose veins."
-    elif prediction[0]==26:
-        output="Hypothyroidism"
-        msg="You have Hypothyroidism."
-    elif prediction[0]==24:
-        output="Hyperthyroidism"
-        msg="You have Hyperthyroidism."
-    elif prediction[0]==25:
-        output="Hypoglycemia"
-        msg="You have low blood sugar levels."
-    elif prediction[0]==31:
-        output="Osteoarthritis"
-        msg="You have osteoarthritis."
-    elif prediction[0]==5:
-        output="Arthritis"
-        msg="You have arthritis."
-    elif prediction[0]==0:
-        output="Vertigo"
-        msg="You have vertigo."
-    elif prediction[0]==2:
-        output="Acne"
-        msg="You have Acne."
-    elif prediction[0]==38:
-        output="Urinary tract infection"
-        msg="You have a urinary tract infection"
-    elif prediction[0]==35:
-        output="Psoriasis"
-        msg="You have psoriasis."
-    elif prediction[0]==27:
-        output="Impetigo"
-        msg="You have impetigo."
-    return render_template("Comp_CONFIRM.html", prediction_text='{}'.format(output),msg_text='{}'.format(msg))
-
+        msg = "You have a Gastro esophageal reflux disease."
+    elif prediction[0] == 9:
+        output = "Chronic cholestasis"
+        msg = "You have a chronic cholestatic disease."
+    elif prediction[0] == 33:
+        output = "Peptic Ulcer Disease"
+        msg = "You have a peptic ulcer disease."
+    elif prediction[0] == 14:
+        output = "Drug Reaction"
+        msg = "You have a nonallergic hypersensitivity reaction or pseudo allergic drug reaction."
+    elif prediction[0] == 1:
+        output = "AIDS"
+        msg = "You have AIDS."
+    elif prediction[0] == 12:
+        output = "Diabetes"
+        msg = "You have diabetes."
+    elif prediction[0] == 17:
+        output = "Gastroenteritis"
+        msg = "You have a stomach flu/gastroenteritis."
+    elif prediction[0] == 6:
+        output = "Bronchial Asthma"
+        msg = "You have bronchial asthma."
+    elif prediction[0] == 23:
+        output = "Hypertension"
+        msg = "You have hypertension."
+    elif prediction[0] == 30:
+        output = "Migrane"
+        msg = "You have a migrane."
+    elif prediction[0] == 7:
+        output = "Cervical Spondylosis"
+        msg = "You have cervical spondylosis."
+    elif prediction[0] == 32:
+        output = "Paralysis/Brain Hemorrhage"
+        msg = "You are prone to brain hemorrhage."
+    elif prediction[0] == 28:
+        output = "Jaundice"
+        msg = "You have jaundice."
+    elif prediction[0] == 29:
+        output = "Malaria"
+        msg = "You might have malaria."
+    elif prediction[0] == 8:
+        output = "Chicken Pox"
+        msg = "You might have chicken pox."
+    elif prediction[0] == 11:
+        output = "Dengue"
+        msg = "You have dengue."
+    elif prediction[0] == 37:
+        output = "Typhoid"
+        msg = "You have typhoid."
+    elif prediction[0] == 40:
+        output = "Hepatitis A"
+        msg = "You have Hepatitis A."
+    elif prediction[0] == 19:
+        output = "Hepatitis B"
+        msg = "You have Hepatitis B."
+    elif prediction[0] == 20:
+        output = "Hepatitis C"
+        msg = "You have Hepatitis C."
+    elif prediction[0] == 21:
+        output = "Hepatitis D"
+        msg = "You have Hepatitis D."
+    elif prediction[0] == 22:
+        output = "Hepatitis E"
+        msg = "You have Hepatitis E."
+    elif prediction[0] == 3:
+        output = "Alcoholic Hepatitis"
+        msg = "You have alcoholic Hepatitis."
+    elif prediction[0] == 36:
+        output = "Tuberculosis"
+        msg = "You have tuberculosis."
+    elif prediction[0] == 10:
+        output = "Common cold"
+        msg = "You have common cold."
+    elif prediction[0] == 34:
+        output = "Pneumonia"
+        msg = "You have pneumonia."
+    elif prediction[0] == 13:
+        output = "Piles"
+        msg = "You have piles."
+    elif prediction[0] == 18:
+        output = "Heart Attack"
+        msg = "You are prone to a heart attack."
+    elif prediction[0] == 39:
+        output = "Varicose veins"
+        msg = "You have varicose veins."
+    elif prediction[0] == 26:
+        output = "Hypothyroidism"
+        msg = "You have Hypothyroidism."
+    elif prediction[0] == 24:
+        output = "Hyperthyroidism"
+        msg = "You have Hyperthyroidism."
+    elif prediction[0] == 25:
+        output = "Hypoglycemia"
+        msg = "You have low blood sugar levels."
+    elif prediction[0] == 31:
+        output = "Osteoarthritis"
+        msg = "You have osteoarthritis."
+    elif prediction[0] == 5:
+        output = "Arthritis"
+        msg = "You have arthritis."
+    elif prediction[0] == 0:
+        output = "Vertigo"
+        msg = "You have vertigo."
+    elif prediction[0] == 2:
+        output = "Acne"
+        msg = "You have Acne."
+    elif prediction[0] == 38:
+        output = "Urinary tract infection"
+        msg = "You have a urinary tract infection"
+    elif prediction[0] == 35:
+        output = "Psoriasis"
+        msg = "You have psoriasis."
+    elif prediction[0] == 27:
+        output = "Impetigo"
+        msg = "You have impetigo."
+    return render_template("Comp_CONFIRM.html", prediction_text='{}'.format(output), msg_text='{}'.format(msg))
 
 if __name__ == '__main__':
     app.run(debug=True)
